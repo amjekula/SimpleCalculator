@@ -10,7 +10,7 @@ pipeline {
       stage('Clean & Deploy to Nexus') {
         steps {
             withMaven (maven: 'maven3'){
-                sh script: 'mvn clean deploy'
+                sh 'mvn clean deploy'
            }
         }
       }
